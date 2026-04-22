@@ -13,7 +13,7 @@ public class BusinessTask extends Task implements Completable{
          * @param description
          * @param company
          */
-        public BusinessTask(String ID, String name, int rank, String dueDate, boolean isCompleted, String description, String company) {
+        public BusinessTask(int ID, String name, int rank, String dueDate, boolean isCompleted, String description, String company) {
             super(ID, name, rank, dueDate, isCompleted, description);
             this.company = company;
         }
@@ -33,6 +33,11 @@ public class BusinessTask extends Task implements Completable{
         public void setCompany(String company) {
             this.company = company;
         }
+
+    @Override
+    public void markComplete() {
+        setCompleted(true);
+    }
     }
 
-}
+
