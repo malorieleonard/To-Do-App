@@ -85,4 +85,13 @@ public class Task {
      * @return a boolean indication of whether a task has been marked as complete
      */
     public boolean isCompleted() { return isCompleted; }
+
+    public void setCompleted(boolean isCompleted) {
+        this.isCompleted = isCompleted;
+    }
+
+    @Override
+    public String toString() {
+        return ID + "," + name + "," + rank + "," + dueDate + "," + isCompleted + "," + description;
+    }
 }
