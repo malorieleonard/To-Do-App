@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class BusinessTaskTest extends TestCase {
 
-    public void testEducationalTaskConstructorAndGetters() {
+    public void testBusinessTaskConstructorAndGetters() {
         BusinessTask task = new BusinessTask(
                 109,
                 "Finish excel sheet",
