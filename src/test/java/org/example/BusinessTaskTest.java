@@ -15,9 +15,9 @@ public class BusinessTaskTest extends TestCase {
                 "Google"
         );
 
-        assertEquals(101, task.getID());
+        assertEquals(109, task.getID());
         assertEquals("Finish excel sheet", task.getName());
-        assertEquals(8, task.getRank());
+        assertEquals(10, task.getRank());
         assertEquals("05/1/26", task.getDueDate());
         assertFalse(task.isCompleted());
         assertEquals("Finish excel sheet of business expenses", task.getDescription());
