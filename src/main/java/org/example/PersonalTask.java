@@ -1,6 +1,6 @@
 package org.example;
 
-public class PersonalTask extends Task {
+public class PersonalTask extends Task implements Completable {
     private String category;
 
     /**
@@ -35,5 +35,13 @@ public class PersonalTask extends Task {
      */
     public String getCategory(){
         return category;
+    }
+
+    /**
+     * Marks the personal task as complete.
+     */
+    @Override
+    public void markComplete() {
+        setCompleted(true);
     }
 }
