@@ -1,4 +1,4 @@
-package org.example;
+package org.todoapp;
 
 import junit.framework.TestCase;
 

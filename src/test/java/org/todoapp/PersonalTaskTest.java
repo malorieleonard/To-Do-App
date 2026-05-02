@@ -1,8 +1,6 @@
-package org.example;
+package org.todoapp;
 
 import junit.framework.TestCase;
-
-import static junit.framework.Assert.*;
 
 public class PersonalTaskTest extends TestCase {
     public void testPersonalTaskConstructorAndGetters() {

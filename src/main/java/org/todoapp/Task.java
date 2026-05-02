@@ -1,7 +1,4 @@
-package org.example;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.todoapp;
 
 /**
  * Base class representing a task within a to-do list.

@@ -1,4 +1,4 @@
-package org.example;
+package org.todoapp;
 
 /**
  * Represents an educational task in the to-do list.

@@ -1,4 +1,4 @@
-package org.example;
+package org.todoapp;
 
 public class BusinessTask extends Task implements Completable{
         private String company;

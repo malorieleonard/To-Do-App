@@ -1,4 +1,4 @@
-package org.example;
+package org.todoapp;
 
 /**
  * Interface for tasks that can be marked as complete.

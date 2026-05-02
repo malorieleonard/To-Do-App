@@ -1,4 +1,4 @@
-package org.example;
+package org.todoapp;
 
 public class PersonalTask extends Task implements Completable {
     private String category;
