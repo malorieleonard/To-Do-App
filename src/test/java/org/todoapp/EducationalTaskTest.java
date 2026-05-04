@@ -1,6 +1,7 @@
 package org.todoapp;
 
 import junit.framework.TestCase;
+import org.todoapp.model.EducationalTask;
 
 public class EducationalTaskTest extends TestCase {
 

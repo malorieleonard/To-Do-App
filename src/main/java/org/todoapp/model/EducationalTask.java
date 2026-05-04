@@ -1,4 +1,4 @@
-package org.todoapp;
+package org.todoapp.model;
 
 /**
  * Represents an educational task in the to-do list.

@@ -1,6 +1,7 @@
 package org.todoapp;
 
 import junit.framework.TestCase;
+import org.todoapp.model.PersonalTask;
 
 public class PersonalTaskTest extends TestCase {
     public void testPersonalTaskConstructorAndGetters() {

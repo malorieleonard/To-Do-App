@@ -1,4 +1,4 @@
-package org.todoapp;
+package org.todoapp.model;
 
 import java.io.FileWriter;
 import java.io.IOException;

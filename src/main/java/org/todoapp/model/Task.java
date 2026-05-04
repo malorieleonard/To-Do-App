@@ -1,4 +1,4 @@
-package org.todoapp;
+package org.todoapp.model;
 
 /**
  * Base class representing a task within a to-do list.

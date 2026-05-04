@@ -1,6 +1,9 @@
 package org.todoapp;
 
 import junit.framework.TestCase;
+import org.todoapp.model.EducationalTask;
+import org.todoapp.model.Task;
+import org.todoapp.model.TaskManager;
 
 public class TaskManagerTest extends TestCase {
 

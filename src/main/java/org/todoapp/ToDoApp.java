@@ -5,11 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.todoapp.controller.HomeController;
+import org.todoapp.model.TaskManager;
 
 public class ToDoApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/todoapp/view/HomeView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/HomeView.fxml"));
         Scene scene = new Scene(loader.load(), 1050, 680);
 
         TaskManager taskmanager = new TaskManager();
