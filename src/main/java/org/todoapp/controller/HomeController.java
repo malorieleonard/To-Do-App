@@ -18,11 +18,6 @@ public class HomeController {
 
     private TaskManager taskManage;
 
-    @FXML
-    public void initialize() {
-        setStatus("Ready");
-    }
-
     public void setTaskManager(TaskManager taskManage) {
         this.taskManage = taskManage;
         loadView("HomeView.fxml");
@@ -43,13 +38,9 @@ public class HomeController {
         loadView("EducationalTaskView.fxml");
     }
 
-    public void setStatus(String message) {
-        statusLabel.setText(message);
-    }
-
     private void loadView(String fxmlFile) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/todoapp/view/" + fxmlFile));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/" + fxmlFile));
             Node content = loader.load();
             Object controller = loader.getController();
 
@@ -61,9 +52,8 @@ public class HomeController {
             }
 
             rootPane.setCenter(content);
-            setStatus("Loaded: " + fxmlFile.replace("View.fxml", ""));
         } catch (IOException e) {
-            setStatus("Unable to load view: " + fxmlFile);
+            System.err.println("Error: Could not read file.");
             e.printStackTrace();
         }
     }

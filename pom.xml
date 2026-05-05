@@ -75,7 +75,7 @@
               <id>default-cli</id>
               <configuration>
                 <mainClass>
-                  org.todoapp.ToDoApp
+                  org.todoapp/org.todoapp.ToDoApp
                 </mainClass>
                 <launcher>app</launcher>
                 <jlinkZipName>app</jlinkZipName>

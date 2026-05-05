@@ -41,7 +41,7 @@ public class BusinessTask extends Task implements Completable{
 
     @Override
     public String toString() {
-        return ID + "," + company + "," + name + "," + rank + "," + dueDate + "," + isCompleted + "," + description;
+        return super.getDescription() + "," + company;
     }
 }
 

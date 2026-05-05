@@ -77,16 +77,10 @@ import org.todoapp.model.*;
 
         private void clearMessages() {
             messageLabel.setText("");
-            if (homeController != null) {
-                homeController.setStatus("");
-            }
         }
 
         private void showMessage(String message) {
             messageLabel.setText(message);
-            if (homeController != null) {
-                homeController.setStatus(message);
-            }
         }
 
         @Override
