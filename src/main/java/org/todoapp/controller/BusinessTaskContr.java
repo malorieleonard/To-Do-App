@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
-
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.todoapp.model.*;
@@ -43,7 +42,7 @@ public class BusinessTaskContr extends BaseController implements StatusAware {
                 return;
             }
 
-            BusinessTask businessTask = new BusinessTask(name, company, ID, rank, dueDate, description);
+            BusinessTask businessTask = new BusinessTask(ID, name, rank, dueDate, false, description, company);
             taskManage.addTask(businessTask);
             showMessage("Task " + name + " added to the list.");
             clearFields();
