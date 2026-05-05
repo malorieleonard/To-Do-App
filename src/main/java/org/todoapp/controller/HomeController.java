@@ -13,9 +13,6 @@ public class HomeController {
     @FXML
     private BorderPane rootPane;
 
-    @FXML
-    private Label statusLabel;
-
     private TaskManager taskManage;
 
     public void setTaskManager(TaskManager taskManage) {
