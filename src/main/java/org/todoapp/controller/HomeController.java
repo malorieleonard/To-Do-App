@@ -49,7 +49,7 @@ public class HomeController {
 
     private void loadView(String fxmlFile) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/todoapp/view/" + fxmlFile));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/" + fxmlFile));
             Node content = loader.load();
             Object controller = loader.getController();
 

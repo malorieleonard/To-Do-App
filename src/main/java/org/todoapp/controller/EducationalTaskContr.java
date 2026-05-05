@@ -24,7 +24,7 @@ public class EducationalTaskContr extends BaseController implements StatusAware 
     private HomeController homeController;
 
     @FXML
-    private void addBusinessTask() {
+    private void addEducationalTask() {
         try {
             String name = nameField.getText().trim();
             String teacher = teacherField.getText().trim();
