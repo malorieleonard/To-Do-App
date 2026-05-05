@@ -61,7 +61,7 @@
    <bottom>
       <HBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Create Task">
+            <Button mnemonicParsing="false" onAction="#addBusinessTask" text="Create Task">
                <HBox.margin>
                   <Insets left="260.0" top="15.0" />
                </HBox.margin>
