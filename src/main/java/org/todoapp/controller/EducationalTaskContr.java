@@ -2,6 +2,8 @@ package org.todoapp.controller;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -46,6 +48,11 @@ public class EducationalTaskContr extends BaseController implements StatusAware 
 
             EducationalTask educationalTask = new EducationalTask(ID, name, rank, dueDate, false, description, className, teacher);
             taskManage.addTask(educationalTask);
+            try {
+                taskManage.saveTasks("tasks.txt");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             showMessage("Task " + name + " added to the list.");
             clearFields();
 
