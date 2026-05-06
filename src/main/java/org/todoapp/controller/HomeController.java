@@ -10,8 +10,6 @@ import org.todoapp.model.TaskManager;
 import java.io.IOException;
 
 public class HomeController {
-    @FXML
-    private BorderPane rootPane;
 
     private TaskManager taskManage;
 
@@ -48,7 +46,6 @@ public class HomeController {
                 statusAware.setHomeController(this);
             }
 
-            rootPane.setCenter(content);
         } catch (IOException e) {
             System.err.println("Error: Could not read file.");
             e.printStackTrace();
