@@ -13,9 +13,11 @@ public class HomeController {
 
     private TaskManager taskManage;
 
+    @FXML
+    private BorderPane rootPane;
+
     public void setTaskManager(TaskManager taskManage) {
         this.taskManage = taskManage;
-        loadView("HomeView.fxml");
     }
 
     @FXML
@@ -45,6 +47,8 @@ public class HomeController {
             if (controller instanceof StatusAware statusAware) {
                 statusAware.setHomeController(this);
             }
+
+            rootPane.setCenter(content);
 
         } catch (IOException e) {
             System.err.println("Error: Could not read file.");

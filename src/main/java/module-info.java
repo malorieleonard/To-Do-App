@@ -8,4 +8,5 @@ module org.todoapp {
 
     opens org.todoapp to javafx.fxml;
     opens org.todoapp.controller to javafx.fxml;
+    opens org.todoapp.model to javafx.fxml;
 }
