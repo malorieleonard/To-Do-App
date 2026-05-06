@@ -35,6 +35,9 @@ public class HomeController {
         loadView("EducationalTaskView.fxml");
     }
 
+    @FXML
+    private void showHome() { loadView("HomeView.fxml");}
+
     private void loadView(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/" + fxmlFile));
