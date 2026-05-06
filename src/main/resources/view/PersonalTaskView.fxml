@@ -45,7 +45,7 @@
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="420.0" text="Catagory:" GridPane.rowIndex="2" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="344.0" text="Rank:" GridPane.rowIndex="3" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="361.0" text="Due Date:" GridPane.rowIndex="4" />
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="347.0" text="Desription" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="347.0" text="Description:" GridPane.rowIndex="5" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="374.0" text="Completed:" GridPane.rowIndex="6" />
             <TextField fx:id="nameField" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" />
             <TextField fx:id="idField" GridPane.columnIndex="1" GridPane.rowIndex="1" />

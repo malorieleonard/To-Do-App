@@ -37,18 +37,30 @@ public class Task {
      */
     public int getID() { return ID; }
 
+    /**
+     * Returns the name of the task
+     * @return the task's name
+     */
     public String getName() { return name; }
 
+    /**
+     * Sets the name of the task
+     * @param name the name of the task
+     */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Returns the name of the task
-     * @return the task's name
+     * Returns the description of the task
+     * @return the task's description
      */
     public String getDescription() { return description; }
 
+    /**
+     * sets the task's description
+     * @param description the task's description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
@@ -59,6 +71,10 @@ public class Task {
      */
     public int getRank() { return rank; }
 
+    /**
+     * Sets the rank of the task
+     * @param rank the rank of the task
+     */
     public void setRank(int rank) {
         this.rank = rank;
     }
@@ -83,6 +99,10 @@ public class Task {
      */
     public boolean isCompleted() { return isCompleted; }
 
+    /**
+     * Allows for modification of completion status
+     * @param isCompleted whether the task is marked as complete
+     */
     public void setCompleted(boolean isCompleted) {
         this.isCompleted = isCompleted;
     }

@@ -1,10 +1,13 @@
 package org.todoapp.model;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Manages a collection of tasks.
@@ -12,12 +15,21 @@ import java.util.List;
  */
 public class TaskManager {
     private ArrayList<Task> tasks;
+    private static final Path DATA_DIR    = Paths.get("data");
+    private static final Path TASK_FILE    = Paths.get("data", "tasks.txt");
 
     /**
      * Constructs a TaskManager and initializes the task list.
      */
     public TaskManager() {
         tasks = new ArrayList<>();
+        try {
+            if (!Files.exists(DATA_DIR)) {
+                Files.createDirectories(DATA_DIR);
+            }
+        } catch (IOException e) {
+            System.err.println("Error: Could not read file.");
+        }
     }
 
     /**
@@ -77,13 +89,39 @@ public class TaskManager {
      * @param fileName the file to save to
      * @throws IOException if the file cannot be written
      */
-    public void saveTasksToFile(String fileName) throws IOException {
-        PrintWriter writer = new PrintWriter(new FileWriter(fileName));
-
-        for (Task task : tasks) {
-            writer.println(task.toString());
+    public void saveTasks(String fileName) throws IOException {
+        try(Formatter fmt = new Formatter(TASK_FILE.toFile())) {
+            for (Task t : tasks) {
+                fmt.format("%d,%s,%d,%s,%s", t.getID(), t.getName(), t.getRank(), t.getDueDate(), t.getDescription());
+            }
+        } catch (IOException e) {
+            System.err.println("Error: Could not read file.");
         }
+    }
 
-        writer.close();
+    public void loadTasks() throws IOException {
+        tasks.clear();
+        try {
+            if (!Files.exists(TASK_FILE)) {
+                return;
+            }
+            try (Scanner load = new Scanner(TASK_FILE.toFile())) {
+                while (load.hasNextLine()) {
+                    String line = load.nextLine();
+                    String[] parts = line.split(",");
+                    int id = Integer.parseInt(parts[0]);
+                    String name = parts[1];
+                    int rank = Integer.parseInt(parts[2]);
+                    String dueDate = parts[3];
+                    String description = parts[4];
+                    Task task = new Task(id, name, rank, dueDate, false, description);
+                    if (task != null) {
+                        tasks.add(task);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error: Could not read file.");
+        }
     }
 }
