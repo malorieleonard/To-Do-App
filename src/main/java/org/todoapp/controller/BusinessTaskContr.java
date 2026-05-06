@@ -2,6 +2,8 @@ package org.todoapp.controller;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -44,6 +46,11 @@ public class BusinessTaskContr extends BaseController implements StatusAware {
 
             BusinessTask businessTask = new BusinessTask(ID, name, rank, dueDate, false, description, company);
             taskManage.addTask(businessTask);
+            try {
+                taskManage.saveTasks("tasks.txt");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             showMessage("Task " + name + " added to the list.");
             clearFields();
 

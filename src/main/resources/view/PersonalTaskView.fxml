@@ -41,7 +41,7 @@
          <children>
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="391.0" text="Name:" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="375.0" text="ID:" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="420.0" text="Catagory:" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="420.0" text="Category:" GridPane.rowIndex="2" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="344.0" text="Rank:" GridPane.rowIndex="3" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="361.0" text="Due Date:" GridPane.rowIndex="4" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="347.0" text="Description:" GridPane.rowIndex="5" />
