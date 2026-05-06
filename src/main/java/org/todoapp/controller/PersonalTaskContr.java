@@ -3,13 +3,11 @@ package org.todoapp.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
-import javafx.collections.FXCollections;
 
 import org.todoapp.model.*;
 
@@ -17,12 +15,18 @@ import org.todoapp.model.*;
     public class PersonalTaskContr extends BaseController implements StatusAware {
         @FXML
         private TextField nameField;
-        @FXML private TextField categoryField;
-        @FXML private TextField idField;
-        @FXML private TextField rankField;
-        @FXML private TextField dueDateField;
-        @FXML private TextField descriptionField;
-        @FXML private Label messageLabel;
+        @FXML
+        private TextField categoryField;
+        @FXML
+        private TextField idField;
+        @FXML
+        private TextField rankField;
+        @FXML
+        private TextField dueDateField;
+        @FXML
+        private TextField descriptionField;
+        @FXML
+        private Label messageLabel;
 
         private HomeController homeController;
 
@@ -62,7 +66,8 @@ import org.todoapp.model.*;
             }
         }
 
-        @FXML private void clearFields() {
+        @FXML
+        private void clearFields() {
             nameField.clear();
             categoryField.clear();
             idField.clear();
