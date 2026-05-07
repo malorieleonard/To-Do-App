@@ -44,4 +44,8 @@ public class PersonalTask extends Task implements Completable {
     public void markComplete() {
         setCompleted(true);
     }
+
+    public String toString() {
+        return "ID: " + super.getID() + " | Name: " + super.getName() + " | Rank: " + super.getRank() + " | Due Date: " + super.getDueDate() + " | Category: " + category + " | Description: " + super.getDescription();
+    }
 }

@@ -109,6 +109,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return ID + "," + name + "," + rank + "," + dueDate + "," + isCompleted + "," + description;
+        return "ID: " + ID + " | Name: " + name + " | Rank: " + rank + " | Due Date: " + dueDate + " | Description: " + description;
     }
 }

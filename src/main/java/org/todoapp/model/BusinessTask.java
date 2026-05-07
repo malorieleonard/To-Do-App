@@ -41,6 +41,11 @@ public class BusinessTask extends Task implements Completable {
     public void markComplete() {
         setCompleted(true);
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + super.getID() + " | Name: " + super.getName() + " | Rank: " + super.getRank() + " | Due Date: " + super.getDueDate() + " | Company: " + company + " | Description: " + super.getDescription();
+    }
 }
 
 

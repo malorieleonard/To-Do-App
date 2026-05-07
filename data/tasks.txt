@@ -1,1 +1,4 @@
-1,meeting with client,3,2026-07-09,go over project design
+1,Meeting,2,2026-07-09,Going over project details with a client.
+2,Final Exam,2,2026-05-07,Take final exam
+3,Laundry,3,2026-05-20,Do the laundry
+4,Write Report,4,2026-07-06,Write a report on current project progress.

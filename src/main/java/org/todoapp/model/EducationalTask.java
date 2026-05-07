@@ -71,4 +71,8 @@ public class EducationalTask extends Task implements Completable {
     public void markComplete() {
         setCompleted(true);
     }
+
+    public String toString() {
+        return "ID: " + super.getID() + " | Name: " + super.getName() + " | Rank: " + super.getRank() + " | Due Date: " + super.getDueDate() + " | Class: " + className + " | Teacher: " + teacher + " | Description: " + super.getDescription();
+    }
 }
