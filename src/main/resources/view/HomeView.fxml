@@ -56,7 +56,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="494.0" />
+          <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="494.0" />
         </items>
       </SplitPane>
    </center>

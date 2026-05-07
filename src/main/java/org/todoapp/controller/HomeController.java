@@ -3,9 +3,9 @@ package org.todoapp.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import org.todoapp.model.TaskManager;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
@@ -15,6 +15,9 @@ public class HomeController {
 
     @FXML
     private BorderPane rootPane;
+
+    @FXML
+    private AnchorPane contentPane;
 
     public void setTaskManager(TaskManager taskManage) {
         this.taskManage = taskManage;
@@ -51,7 +54,13 @@ public class HomeController {
                 statusAware.setHomeController(this);
             }
 
-            rootPane.setCenter(content);
+            // rootPane.setCenter(content);
+            contentPane.getChildren().setAll(content);
+
+            AnchorPane.setTopAnchor(content, 30.0);
+            AnchorPane.setRightAnchor(content, 30.0);
+            AnchorPane.setBottomAnchor(content, 30.0);
+            AnchorPane.setLeftAnchor(content, 30.0);
 
         } catch (IOException e) {
             System.err.println("Error: Could not read file.");
