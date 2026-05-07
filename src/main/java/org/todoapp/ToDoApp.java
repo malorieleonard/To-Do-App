@@ -14,6 +14,8 @@ public class ToDoApp extends Application {
         Scene scene = new Scene(loader.load(), 1050, 680);
 
         TaskManager taskmanager = new TaskManager();
+        taskmanager.loadTasks();
+
         HomeController homeController = loader.getController();
         homeController.setTaskManager(taskmanager);
 
