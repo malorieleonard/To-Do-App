@@ -39,7 +39,7 @@ public class HomeController {
     }
 
     @FXML
-    private void showHome() { loadView("HomeView.fxml");}
+    private void showTaskList() { loadView("TaskListView.fxml"); }
 
     private void loadView(String fxmlFile) {
         try {
