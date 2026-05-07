@@ -17,6 +17,8 @@
             </Label>
          </children>
       </HBox>
-      <ListView prefHeight="351.0" prefWidth="600.0" />
+       <ListView fx:id="taskList"
+                 prefHeight="351.0"
+                 prefWidth="600.0" />
    </children>
 </VBox>

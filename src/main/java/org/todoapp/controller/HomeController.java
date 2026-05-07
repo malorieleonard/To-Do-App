@@ -3,9 +3,12 @@ package org.todoapp.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import org.todoapp.model.Task;
 import org.todoapp.model.TaskManager;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.ListView;
 
 import java.io.IOException;
 
@@ -18,6 +21,30 @@ public class HomeController {
 
     @FXML
     private AnchorPane contentPane;
+
+    @FXML
+    private ListView<String> taskList;
+
+    public void setTaskManager(TaskManager taskManage) {
+
+        this.taskManage = taskManage;
+
+        try {
+
+            // Loads tasks from tasks.txt
+            taskManage.loadTasks();
+
+            // Adds each task into the ListView
+            for (Task task : taskManage.getTasks()) {
+
+                taskList.getItems().add(task.toString());
+            }
+
+        } catch (IOException e) {
+
+            System.err.println("Error loading tasks.");
+        }
+    }
 
     public void setTaskManager(TaskManager taskManage) {
         this.taskManage = taskManage;
@@ -40,6 +67,17 @@ public class HomeController {
 
     @FXML
     private void showTaskList() { loadView("TaskListView.fxml"); }
+
+    @FXML
+    void handleAddAction() {
+
+        String userInput = "New Task";
+
+        if (userInput != null && !userInput.trim().isEmpty()) {
+
+            taskList.getItems().add(userInput);
+        }
+    }
 
     private void loadView(String fxmlFile) {
         try {
