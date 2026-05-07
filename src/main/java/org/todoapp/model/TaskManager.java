@@ -92,7 +92,7 @@ public class TaskManager {
     public void saveTasks(String fileName) throws IOException {
         try(Formatter fmt = new Formatter(TASK_FILE.toFile())) {
             for (Task t : tasks) {
-                fmt.format("%d,%s,%d,%s,%s", t.getID(), t.getName(), t.getRank(), t.getDueDate(), t.getDescription());
+                fmt.format("%d,%s,%d,%s,%s%n", t.getID(), t.getName(), t.getRank(), t.getDueDate(), t.getDescription());
             }
         } catch (IOException e) {
             System.err.println("Error: Could not read file.");

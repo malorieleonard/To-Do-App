@@ -39,7 +39,14 @@ public class HomeController {
     }
 
     @FXML
-    private void showTaskList() { loadView("TaskListView.fxml"); }
+    private void showTaskList() {
+        loadView("TaskListView.fxml");
+        taskList.getItems().clear();
+        if (taskManage.getTasks().isEmpty()) {
+            taskList.getItems().add("Tasks are all finished. Good job!");
+        } else {
+            taskManage.getTasks().forEach(d -> taskList.getItems().add(d.toString()));
+        }}
 
     private void loadView(String fxmlFile) {
         try {
