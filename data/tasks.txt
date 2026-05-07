@@ -1,1 +1,1 @@
-1,meeting,3,2026-07-09,business1
+1,meeting with client,3,2026-07-09,go over project design
